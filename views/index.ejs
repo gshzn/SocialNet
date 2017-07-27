@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SocialNet - Home</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+
+  <%- include partials/header.ejs %>
+
+  <div class="container">
+    <div class="jumbotron" id="jumbo">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>SocialNet</h2>
+          <h5>
+            SocialNet is een gebruiksvriendelijke uitkomst voor het in contact blijven met vrienden en familie. Iedereen mag meedoen!
+          </h5>
+        </div>
+        <div class="col-md-4">
+          <h2>Registreer nu!</h2>
+          <h4>Het is gratis!</h4>
+
+          <form method="post" action="/api/register" role="form" style="margin-top: 2rem;" id="registerForm">
+            <div class="form-group">
+              <label for="username">Gebruikersnaam:</label>
+              <input type="text" name="username" id="username" class="form-control" placeholder="Gebruikersnaam" />
+            </div>
+            <div class="form-group">
+              <label for="password">Wachtwoord:</label>
+              <input type="password" name="password" id="password" class="form-control" placeholder="Wachtwoord" />
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-success" value="Registreren" />
+            </div>
+          </form>
+          <div id="alerts">
+            <div class="alert alert-success" id="busy">
+              <p class="text-center">
+                 Bezig met registreren...
+              </p>
+              <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="alert alert-success" id="redirecting">
+              <p class="text-center">
+                 U bent nu geregistreerd. U wordt nu doorgestuurd, een ogenblik geduld alstublieft...
+              </p>
+              <div class="loader">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.redirect.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

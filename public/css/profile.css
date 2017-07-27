@@ -1,0 +1,119 @@
+.header {
+  margin-top: 5rem;
+}
+
+.header-left {
+  display: inline-block;
+}
+.header-left > .profilePicture {
+  height: 100px;
+  width: auto;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.header-left > .username {
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.header-right {
+  display: inline-block;
+  float: right;
+  margin-top: .5rem;
+  text-align: center;
+  font-size: 12.5pt;
+}
+
+.header-right > .followers {
+  margin-top: 2rem;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.header-right > .following {
+  margin-top: 2rem;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.header-right > .followers > span {
+  display: block;
+}
+
+.header-right > .following > span {
+  display: block;
+}
+
+.header-right > #follow-btn {
+  margin-top: -3rem;
+}
+
+.body > .header {
+  font-size: 15pt;
+}
+
+#profile-separator {
+  border: 1px solid #d0d0d0;
+  margin: 10px 0 10px;
+}
+
+.posts {
+  /*display: inline;*/
+  align-items: center;
+  align-content: center;
+}
+
+.post {
+  width: 336.59px;
+  border: 2px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  margin-right: 1px;
+  margin-top: 5px;
+}
+
+.post > .post-date {
+  display: inline-flex;
+  margin-top: 5px;
+  margin-left: 1rem;
+  float: right;
+}
+
+.post > .post-info {
+  display: inline-flex;
+  align-self: flex-start !important;
+}
+
+.post > .post-separator {
+  color: #fff;
+  /*height: 2px;*/
+  margin: 0px 0 10px;
+  border: 1px solid #d0d0d0;
+}
+
+.post > .post-info > .poster-pic {
+  display: inline-flex;
+  width: auto;
+  height: 30px;
+  border-radius: 25px;
+  float: left;
+}
+
+.post > .post-info > .poster-name {
+  display: inline-flex;
+  font-size: 10pt;
+  margin-left: .5rem;
+  margin-top: 5px;
+  font-weight: bold;
+  float: left;
+}
+
+.post > .post-info > span.post-date {
+  display: inline-flex;
+  align-content: flex-end;
+}
+
+.post > .post-content {
+  float:left;
+}

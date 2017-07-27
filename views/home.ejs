@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home | SocialNet</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./css/bootstrap.min.css" rel="stylesheet" />
+  <link href="./css/header.css" rel="stylesheet" />
+  <link href="./css/home.css" rel="stylesheet" />
+</head>
+<body>
+  <%- include ./partials/header-l.ejs %>
+
+  <div id="new-post-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Nieuwe Post</h4>
+        </div>
+        <form id="new-post">
+          <div class="modal-body">
+            <textarea id="textarea-text" class="form-control" name="new-post" placeholder="What's up?" rows="3" form="new-post"></textarea>
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" value="Posten" id="submit-post" name="post" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron">
+      <div class="header">
+        Jouw tijdlijn
+      </div>
+      <div class="new-post">
+        <a data-toggle="modal" href="#new-post-modal"><span class="glyphicon glyphicon-plus"></span> Nieuwe post</a>
+
+      </div><br />
+        <div class="posts">
+          <% for (var i = 0; i < posts.length; i++) { %>
+            <div class="post">
+              <div class="post-info">
+                <a class="poster-link" href="/profile/<%= posts[i].poster.username %>">
+                  <img class="poster-pic" src="<%= posts[i].poster.profilePicture %>" />
+                   <p class="poster-name"><%= posts[i].poster.username %></p>
+                </a>
+              </div>
+              <div class="post-date">
+                <%= posts[i].datePosted %>
+              </div>
+              <hr class="post-separator" />
+              <div class="post-content">
+                <%= posts[i].text %>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/masonry.pkgd.min.js"></script>
+  <script src="./js/home.js"></script>
+</body>
+</html>

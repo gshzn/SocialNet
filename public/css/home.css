@@ -1,0 +1,89 @@
+.header {
+  margin-top: 2rem;
+  font-size: 175%;
+  padding-bottom: 1rem;
+  display: inline-flex;
+  align-self: flex-start;
+}
+
+.new-post {
+  margin-left: 1rem;
+  font-size: 10pt;
+  display: inline-flex;
+  align-self: flex-end;
+}
+
+.posts {
+  /*display: inline;*/
+  align-items: center;
+  align-content: center;
+}
+
+.post {
+  /*display: inline-block;*/
+  width: 336.59px;
+  border: 2px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 10px 10px 10px 10px;
+  margin-right: 1px;
+  margin-top: 5px;
+}
+
+.post > .post-date {
+  display: inline-flex;
+  margin-top: 3px;
+  margin-left: 1rem;
+  float: right;
+}
+
+.post > .post-info {
+  display: inline-flex;
+  align-self: flex-start !important;
+}
+
+.post > .post-separator {
+  color: #fff;
+  /*height: 2px;*/
+  margin: 0px 0 10px;
+  border: 1px solid #d0d0d0;
+}
+
+.post > .post-info > .poster-link > .poster-pic {
+  display: inline-flex;
+  width: auto;
+  height: 30px;
+  border-radius: 25px;
+  float: left;
+}
+
+.post > .post-info > .poster-link > .poster-name {
+  display: inline-flex;
+  font-size: 10pt;
+  margin-left: .5rem;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #000;
+  float: left;
+}
+
+.post > .post-info > span.post-date {
+  display: inline-flex;
+  align-content: flex-end;
+}
+
+.post > .post-content {
+  float:left;
+}
+
+textarea[name=new-post] {
+  resize: none;
+}
+
+.new-form {
+  margin-left: 1rem;
+  display: block;
+}
+
+.new-form #post-new {
+  height: 74px;
+}

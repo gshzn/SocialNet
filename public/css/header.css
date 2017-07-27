@@ -1,0 +1,13 @@
+#login-dp{
+    min-width: 200px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+
+#profilePicture {
+  height: 32px;
+  width: auto;
+  margin-top: 8px;
+  border-radius: 25px;
+}

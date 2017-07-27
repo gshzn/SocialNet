@@ -1,0 +1,37 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <a class="navbar-brand" href="/">SocialNet</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav nav pull-right">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Login</b> <span class="caret"></span></a>
+          <ul class="dropdown-menu" id="login-dp">
+            <li>
+              <div class="row">
+                <div class="col-md-12">
+                  <form accept-charset="UTF-8" action="/api/login" class="form" id="login-nav" method="post" name="login-nav" role="form">
+                    <div class="form-group">
+                      <label class="sr-only" for="nav-username">Gebruikersnaam</label> <input class="form-control" id="nav-username" name="username" placeholder="Gebruikersnaam..." required="" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="nav-password">Wachtwoord</label> <input class="form-control" id="nav-password" name="password" placeholder="Wachtwoord..." required="" type="password">
+                    </div>
+                    <div class="form-group">
+                      <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+                    </div>
+                  </form>
+                  <div id="nav-alerts">
+
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

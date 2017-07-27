@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iAmGuus | SocialNet</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../css/header.css" rel="stylesheet" />
+  <link href="../css/profile.css" rel="stylesheet" />
+</head>
+<body>
+  <% if (user) { %>
+    <%- include ./partials/header-l.ejs %>
+  <% } else { %>
+    <%- include ./partials/header.ejs %>
+  <% } %>
+
+  <div class="container">
+    <div class="jumbotron">
+      <div class="header">
+        <div class="header-left">
+          <img src="<%= target.profilePicture %>" class="img-responsive profilePicture">
+          <p class="username"><%= target.username %></p>
+        </div>
+        <div class="header-right">
+          <div class="following">
+            <span class="following-number"><%= target.following.length %></span>
+            <span class="following-sub">Volgend</span>
+          </div>
+          <div class="followers">
+            <span class="followers-number"><%= target.followers.length %></span>
+            <span class="followers-sub">Volgers</span>
+          </div>
+          <% if (user && !same) { %>
+            <% if (following) { %>
+              <button class="btn btn-lg btn-success" id="follow-btn" data-username="<%= target.username %>">Gevolgd!</button>
+            <% } else { %>
+              <button class="btn btn-lg btn-primary" id="follow-btn" data-username="<%= target.username %>">Volgen</button>
+            <% } %>
+          <% } %>
+        </div>
+      </div>
+      <div class="body">
+        <div class="header">Posts van <%= target.username %></div>
+        <hr id="profile-separator">
+        <div class="posts">
+          <% if (posts.length > 0) { %>
+            <% for (var i = 0; i < posts.length; i++) { %>
+              <div class="post">
+                <div class="post-info">
+                  <img class="poster-pic" src="<%= posts[i].poster.profilePicture %>" />
+                  <p class="poster-name"><%= posts[i].poster.username %></p>
+                </div>
+                <div class="post-date">
+                  <%= posts[i].datePosted %>
+                </div>
+                <hr class="post-separator" />
+                <div class="post-content">
+                  <%= posts[i].text %>
+                </div>
+              </div>
+            <% } %>
+          <% } else { %>
+            <p class="text-center" style="margin-top: 2rem;">
+              Wow, such empty
+            </p>
+          <% } %>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/header.js"></script>
+  <script src="../js/masonry.pkgd.min.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+</html>

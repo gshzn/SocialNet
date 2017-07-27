@@ -1,0 +1,23 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button aria-controls="navbar" aria-expanded="false" class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+      <a class="navbar-brand" href="/">SocialNet</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav nav pull-right">
+        <li>
+          <img id="profilePicture" class="img-rounded img-responsive" src="<%= user.profilePicture %>">
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Welkom, <b><%=user.username%></b> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/profile" alt="Mijn profiel">Mijn profiel</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/api/logout" alt="logout">Uitloggen</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
