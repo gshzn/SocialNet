@@ -179,7 +179,12 @@ var formatDate = (date) => {
 
 //TODO alter method for friends and self only
 var findPosts = (user, cb) => {
-  Post.find({}).sort({datePosted: 'desc'}).exec((err, posts) => {
+  var followingNames = [];
+  followingNames.push(user.username);
+  user.following.forEach((following) => {
+    followingNames.push(following.username);
+  })
+  Post.find({ 'poster.username': { $in: followingNames }}).sort({datePosted: 'desc'}).exec((err, posts) => {
     if (err) {
       throw err;
     } else {
